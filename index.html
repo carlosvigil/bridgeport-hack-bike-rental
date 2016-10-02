@@ -3,43 +3,143 @@
   <head>
     <meta charset="utf-8">
     <title>Public Bike Rental API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+    <style media="screen">
+      body {
+        height: 100%;
+        background-color: rgba(#f0eee6, 0.68);
+        font-family: sans-serif;
+      }
+      .circle {
+        background-color: #645B54;
+      }
+      .rectangle {
+        background-color: #645B54;
+      }
+      #head {
+        width: 62%;
+        margin: auto;
+        border-radius: 16px;
+        background-color: hsla(0, 0%, 100%, 0.62);
+        font-family: "Hammersmith One", sans-serif;
+      }
+      #desc {
+        width: 80%;
+        margin: auto;
+        border-radius: 8px;
+        background-color:  hsla(0, 0%, 100%, 0.8);
+      }
+      #atf {
+        background-size: cover;
+        background-image: url("images/image1.jpg");
+        background-repeat: no-repeat;
+        height: 600px;
+        height: 600px;
+        -webkit-box-shadow: 0 8px 16px 0 hsla(0, 0%, 0%, 0.62);
+        -moz-box-shadow: 0 8px 16px 0 hsla(0, 0%, 0%, 0.62);
+        box-shadow: 0 8px 16px 0 hsla(0, 0%, 0%, 0.62);
+      }
+      #middle {
+        height: 600px;
+      }
+      #bottom {
+        clear: both;
+        height: 600px;
+      }
+      .center {
+        text-align: center;
+      }
+      .left {
+        float: left;
+      }
+      .right {
+        float:right;
+      }
+      .clear-left {
+        clear: left;
+      }
+      .clear-right {
+        clear: right;
+      }
+      .navbar {
+        margin-bottom: 0px;
+      }
+      .img-circle {
+        height: 150px;
+        width: 150px;
+      }
+    </style>
+
   </head>
   <body>
 
-    <div id="nav">
-         <ul>
-             <li><a href="#about">About</a></li>
-             <li><a href="#portfolio">Portfolio</a></li>
-             <li><a href="#contact">Contact</a></li>
-         </ul>
-    </div>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-  <div id="top">
+  <div class="jumbotron container-fluid" id="atf">
     <a id="about" class="smooth"></a>
-      About page content goes here.
+    <h1 class="center" id="head">
+      Bike Rental API
+    </h1>
+    <div class="center" id="desc">
+      <p>An api for easing the implementation of a bike rental system.
+        We provide the basic functionality your program will need to get off the ground.
+      </p>
+    </div>
   </div>
 
   <div id="middle">
-    <a id="portfolio" class="smooth"></a>
-      Portfolio page content goes here.
-  </div>
+    <a id="features" class="smooth"></a>
+      <p>
+        these the features below
+      </p>
+      <div class="rectangle clear-left">
+        <p>feature, feature, feature</p>
+      </div>
+      <div class="circle left">
+        <img class="img-circle" src="images/image4.jpg" alt="image of visa and mastercard" />
+      </div>
+    </div>
+
+    <div class="circle left">
+      <img class="img-circle" src="images/image2.jpg" alt="" />
+    </div>
+    <div class="rectangle right">
+      <p>feature, feature, feature</p>
+    </div>
+
+    <div class="rectangle left">
+      <p>feature, feature, feature</p>
+    </div>
+    <div class="circle right">
+      <img class="img-circle" src="images/image3.png" alt="" />
+    </div>
 
   <div id="bottom">
     <a id="contact" class="smooth"></a>
       Contact page content goes here.
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
-  <script>
-  $('.smooth').on('click', function() {
-      $.smoothScroll({
-          scrollElement: $('body'),
-          scrollTarget: '#' + this.id
-      });
-
-      return false;
-  });
-  </script>
   </body>
 </html>
